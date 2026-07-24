@@ -1,0 +1,64 @@
+.specifications {
+    padding: 100px 24px;
+    background: #f7f9fc;
+  }
+  
+  .specs-container {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+  
+  .specs-image,
+  .specs-content {
+    flex: 1;
+  }
+  
+  .specs-image img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .section-tag {
+    color: #0066cc;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .specs-content h2 {
+    font-size: 42px;
+    margin: 16px 0 40px;
+  }
+  
+  .spec-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .spec-item span {
+    color: #666;
+  }
+  
+  .spec-item strong {
+    color: #111;
+  }
+  
+  @media (max-width: 900px) {
+    .specs-container {
+      flex-direction: column;
+    }
+  
+    .specs-content h2 {
+      font-size: 32px;
+    }
+  }

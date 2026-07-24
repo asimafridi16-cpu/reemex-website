@@ -1,0 +1,50 @@
+.features {
+    padding: 100px 24px;
+    background: #ffffff;
+  }
+  
+  .container {
+    max-width: 1280px;
+    margin: auto;
+  }
+  
+  .features h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 60px;
+    font-size: 18px;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  
+  .card {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 32px;
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  }
+  
+  .card h3 {
+    margin-bottom: 15px;
+    color: #0066cc;
+  }
+  
+  .card p {
+    color: #555;
+    line-height: 1.7;
+  }
