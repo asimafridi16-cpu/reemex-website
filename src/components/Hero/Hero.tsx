@@ -1,41 +1,56 @@
 import "./Hero.css";
-import heroImage from "../../assets/images/hero.png";
+import heroBall from "../../assets/images/specifications.png";
+import { AMAZON_URL } from "../../constants/links";
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section id="home" className="hero">
-      <div className="hero-content">
-        <div className="hero-text">
-          <span className="badge">NEW ARRIVAL</span>
+    <section className="hero" id="home">
+      <div className="hero__ambient" aria-hidden="true" />
+      <div className="hero__glow" aria-hidden="true" />
 
-          <h1>
-            Train Hard.
+      <div className="hero__inner container container--wide">
+        <div className="hero__content">
+          <span className="section-eyebrow">Silent Basketball</span>
+
+          <h1 className="hero__title">
+            Train in silence.
             <br />
-            Play Quiet.
+            <span className="hero__title-accent">Play with precision.</span>
           </h1>
 
-          <p>
-            Experience quieter basketball practice with the REEMZAR Silent
-            Basketball. Perfect for indoor training and everyday skill
-            development.
+          <p className="hero__description">
+            The REEMZAR Silent Basketball delivers realistic dribbling feel
+            with premium high-density foam — engineered for quiet indoor
+            practice without compromising control.
           </p>
 
-          <a
-            href="https://www.amazon.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hero-btn"
-          >
-            Buy on Amazon
-          </a>
+          <div className="hero__actions">
+            <a
+              href={AMAZON_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--primary btn--large"
+            >
+              Shop on Amazon
+            </a>
+            <a href="#features" className="btn btn--secondary btn--large">
+              Explore Features
+            </a>
+          </div>
         </div>
 
-        <div className="hero-image">
-          <img src={heroImage} alt="REEMZAR Silent Basketball" />
+        <div className="hero__visual">
+          <div className="hero__product-stage">
+            <img
+              src={heroBall}
+              alt="REEMZAR Silent Basketball — premium foam indoor training ball"
+              className="hero__product"
+              width={560}
+              height={560}
+            />
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}
