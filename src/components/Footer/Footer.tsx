@@ -62,7 +62,7 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <p>&copy; {year} REEMZAR. All rights reserved.</p>
+          <p>&copy; {year} REEMZAR®. All rights reserved.</p>
         </div>
       </div>
     </footer>
