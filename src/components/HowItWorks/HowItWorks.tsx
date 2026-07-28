@@ -1,11 +1,12 @@
 import "./HowItWorks.css";
 import { useReveal } from "../../hooks/useReveal";
+import { PRODUCT } from "../../constants/product";
 
 const steps = [
   {
     number: "01",
     title: "Unbox & Inspect",
-    text: "Your REEMZAR arrives ready to play. Official Size 7, premium foam, no inflation needed.",
+    text: `Your REEMZAR® arrives ready to play. ${PRODUCT.size}, premium PU foam, no inflation needed.`,
   },
   {
     number: "02",
@@ -20,7 +21,7 @@ const steps = [
   {
     number: "04",
     title: "Level Up Daily",
-    text: "Consistent reps build muscle memory. REEMZAR makes daily practice effortless.",
+    text: "Consistent reps build muscle memory. REEMZAR® makes daily practice effortless.",
   },
 ];
 
@@ -47,7 +48,7 @@ export default function HowItWorks() {
             <li key={step.number} className="how__step">
               <div className="how__marker">
                 <span className="how__number">{step.number}</span>
-                {index < steps.length - 1 && <span className="how__line" />}
+                {index < steps.length - 1 && <span className="how__line" aria-hidden="true" />}
               </div>
               <div className="how__content">
                 <h3>{step.title}</h3>

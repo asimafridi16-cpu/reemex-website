@@ -1,8 +1,9 @@
 import "./Lifestyle.css";
 import courtImg from "../../assets/images/hero.png";
-import productImg from "../../assets/images/product.png";
+import productImg from "../../assets/images/specifications.png";
 import lifestyleImg from "../../assets/images/lifestyle.png";
 import { useReveal } from "../../hooks/useReveal";
+import { PRODUCT } from "../../constants/product";
 
 export default function Lifestyle() {
   const { ref, isVisible } = useReveal<HTMLElement>();
@@ -18,7 +19,7 @@ export default function Lifestyle() {
           <span className="section-eyebrow">Lifestyle</span>
           <h2 className="section-title">Your court. Your schedule.</h2>
           <p className="section-subtitle">
-            Transform any space into a training ground. REEMZAR fits seamlessly
+            Transform any space into a training ground. REEMZAR® fits seamlessly
             into the way you live — and the way you play.
           </p>
         </header>
@@ -27,7 +28,7 @@ export default function Lifestyle() {
           <figure className="lifestyle__hero-image">
             <img
               src={lifestyleImg}
-              alt="Training with REEMZAR Silent Basketball at home"
+              alt="Young athlete training with REEMZAR Silent Basketball at home"
             />
             <figcaption>Train anywhere indoors</figcaption>
           </figure>
@@ -36,16 +37,16 @@ export default function Lifestyle() {
             <figure className="lifestyle__side-image lifestyle__side-image--top">
               <img
                 src={productImg}
-                alt="REEMZAR Silent Basketball product detail"
+                alt={`${PRODUCT.name} product detail`}
               />
-              <figcaption>Premium foam construction</figcaption>
+              <figcaption>Premium PU foam construction</figcaption>
             </figure>
             <figure className="lifestyle__side-image">
               <img
                 src={courtImg}
-                alt="REEMZAR Silent Basketball on indoor court"
+                alt="REEMZAR Silent Basketball on indoor hardwood court"
               />
-              <figcaption>Official Size 7 feel</figcaption>
+              <figcaption>{PRODUCT.size} feel</figcaption>
             </figure>
           </div>
         </div>

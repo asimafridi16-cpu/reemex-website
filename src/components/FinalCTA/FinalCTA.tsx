@@ -1,6 +1,7 @@
 import "./FinalCTA.css";
 import { AMAZON_URL } from "../../constants/links";
 import { useReveal } from "../../hooks/useReveal";
+import { PRODUCT } from "../../constants/product";
 
 export default function FinalCTA() {
   const { ref, isVisible } = useReveal<HTMLElement>();
@@ -9,18 +10,20 @@ export default function FinalCTA() {
     <section
       className={`cta section reveal${isVisible ? " is-visible" : ""}`}
       ref={ref}
+      aria-labelledby="cta-title"
     >
       <div className="container">
         <div className="cta__card">
           <div className="cta__glow" aria-hidden="true" />
           <div className="cta__content">
             <span className="section-eyebrow cta__eyebrow">Ready to train?</span>
-            <h2 className="cta__title">
+            <h2 id="cta-title" className="cta__title">
               Elevate your game — without the noise.
             </h2>
             <p className="cta__text">
-              Join thousands of players who train smarter with REEMZAR.
-              Premium foam. Official Size 7. Delivered to your door.
+              Join thousands of players who train smarter with REEMZAR®.
+              Premium {PRODUCT.material.toLowerCase()}. {PRODUCT.size}. Delivered
+              to your door.
             </p>
             <div className="cta__actions">
               <a

@@ -1,26 +1,26 @@
 import "./Hero.css";
 import heroBall from "../../assets/images/specifications.png";
 import { AMAZON_URL } from "../../constants/links";
+import { PRODUCT } from "../../constants/product";
 
 export default function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero__ambient" aria-hidden="true" />
-      <div className="hero__glow" aria-hidden="true" />
 
       <div className="hero__inner container container--wide">
         <div className="hero__content">
-          <span className="section-eyebrow">Silent Basketball</span>
+          <span className="section-eyebrow">REEMZAR® Silent Basketball</span>
 
-          <h1 className="hero__title">
+          <h1 id="hero-title" className="hero__title">
             Train in silence.
             <br />
             <span className="hero__title-accent">Play with precision.</span>
           </h1>
 
           <p className="hero__description">
-            The REEMZAR Silent Basketball delivers realistic dribbling feel
-            with premium high-density foam — engineered for quiet indoor
+            The {PRODUCT.name} delivers realistic dribbling feel with premium{" "}
+            {PRODUCT.material.toLowerCase()} — engineered for quiet indoor
             practice without compromising control.
           </p>
 
@@ -43,10 +43,11 @@ export default function Hero() {
           <div className="hero__product-stage">
             <img
               src={heroBall}
-              alt="REEMZAR Silent Basketball — premium foam indoor training ball"
+              alt={`${PRODUCT.name} — premium blue foam indoor training ball`}
               className="hero__product"
               width={560}
               height={560}
+              fetchPriority="high"
             />
           </div>
         </div>

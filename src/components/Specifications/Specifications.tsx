@@ -1,15 +1,7 @@
 import "./Specifications.css";
-import specsImage from "../../assets/images/specifications.png";
+import specsImage from "../../assets/images/product.png";
 import { useReveal } from "../../hooks/useReveal";
-
-const specs = [
-  { label: "Size", value: "Official Size 7" },
-  { label: "Diameter", value: "24 cm" },
-  { label: "Weight", value: "320 g" },
-  { label: "Material", value: "High-Density Foam" },
-  { label: "Surface", value: "Textured Comfort Grip" },
-  { label: "Recommended Use", value: "Indoor Practice" },
-];
+import { SPECS } from "../../constants/product";
 
 export default function Specifications() {
   const { ref, isVisible } = useReveal<HTMLElement>();
@@ -25,7 +17,7 @@ export default function Specifications() {
           <div className="specs__image-wrap">
             <img
               src={specsImage}
-              alt="REEMZAR Silent Basketball specifications detail"
+              alt="REEMZAR Silent Basketball technical specifications"
             />
           </div>
         </div>
@@ -34,12 +26,12 @@ export default function Specifications() {
           <span className="section-eyebrow">Specifications</span>
           <h2 className="section-title">Precision in every detail</h2>
           <p className="section-subtitle">
-            Official Size 7 dimensions with premium foam construction —
+            Official Size 7 dimensions with premium PU foam construction —
             engineered for serious indoor training.
           </p>
 
           <dl className="specs__list">
-            {specs.map((spec) => (
+            {SPECS.map((spec) => (
               <div key={spec.label} className="specs__item">
                 <dt>{spec.label}</dt>
                 <dd>{spec.value}</dd>

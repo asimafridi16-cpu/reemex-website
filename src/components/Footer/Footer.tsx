@@ -1,6 +1,7 @@
 import "./Footer.css";
 import logo from "../../assets/images/logo.svg";
 import { AMAZON_URL, NAV_LINKS } from "../../constants/links";
+import { PRODUCT } from "../../constants/product";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -10,10 +11,10 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <a href="#home" className="footer__logo">
-            <img src={logo} alt="REEMZAR" />
+            <img src={logo} alt="REEMZAR" width={160} height={34} />
           </a>
           <p className="footer__tagline">
-            Premium silent basketball for indoor training. Train anytime,
+            {PRODUCT.name} for premium indoor training. Train anytime,
             anywhere — without the noise.
           </p>
         </div>
@@ -30,10 +31,10 @@ export default function Footer() {
               <a href="#benefits">Benefits</a>
             </li>
             <li>
-              <a href="#lifestyle">Lifestyle</a>
+              <a href="#comparison">Comparison</a>
             </li>
             <li>
-              <a href="#how-it-works">How It Works</a>
+              <a href="#testimonials">Testimonials</a>
             </li>
           </ul>
         </nav>

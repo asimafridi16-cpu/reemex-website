@@ -38,9 +38,9 @@
   left: 0;
   right: 0;
   padding: var(--space-6);
-  background: linear-gradient(transparent, rgba(7, 20, 35, 0.7));
+  background: linear-gradient(transparent, rgba(7, 20, 35, 0.78));
   color: #fff;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
 }
 

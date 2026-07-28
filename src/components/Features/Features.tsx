@@ -1,42 +1,26 @@
 import "./Features.css";
+import Icon from "../icons/Icon";
 import { useReveal } from "../../hooks/useReveal";
+import { PRODUCT } from "../../constants/product";
 
 const features = [
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 3v18M3 12h18" strokeLinecap="round" />
-        <circle cx="12" cy="12" r="9" />
-      </svg>
-    ),
+    icon: "quiet" as const,
     title: "Ultra-Quiet Dribbling",
-    text: "High-density foam absorbs impact sound so you can practice in apartments, hallways, and home courts.",
+    text: "High-density PU foam absorbs impact sound so you can practice in apartments, hallways, and home courts.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 3a9 9 0 0 1 0 18" />
-      </svg>
-    ),
+    icon: "size" as const,
     title: "Official Size 7",
-    text: "24 cm diameter matches regulation feel — the same grip and handling you expect from a real basketball.",
+    text: `${PRODUCT.diameter} diameter matches regulation feel — the same grip and handling you expect from a real basketball.`,
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2l3 7h7l-5.5 4.5 2 7L12 17l-6.5 3.5 2-7L2 9h7z" strokeLinejoin="round" />
-      </svg>
-    ),
+    icon: "foam" as const,
     title: "Premium Foam Core",
-    text: "Engineered high-density foam delivers consistent bounce, soft touch, and long-lasting durability.",
+    text: `Engineered ${PRODUCT.material.toLowerCase()} delivers consistent bounce, soft touch, and long-lasting durability.`,
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M7 11V7a5 5 0 0 1 10 0v4M5 11h14v10H5z" strokeLinejoin="round" />
-      </svg>
-    ),
+    icon: "grip" as const,
     title: "Comfort Grip Surface",
     text: "Textured exterior ensures confident handling for dribbling, passing, and skill development drills.",
   },
@@ -56,15 +40,17 @@ export default function Features() {
           <span className="section-eyebrow">Features</span>
           <h2 className="section-title">Engineered for silent excellence</h2>
           <p className="section-subtitle">
-            Every detail is designed to give you a premium training experience —
-            quiet, controlled, and built to last.
+            Every detail of the {PRODUCT.name} is designed for a premium training
+            experience — quiet, controlled, and built to last.
           </p>
         </header>
 
         <div className="features__grid">
           {features.map((feature) => (
             <article key={feature.title} className="features__card">
-              <div className="features__icon">{feature.icon}</div>
+              <div className="features__icon">
+                <Icon name={feature.icon} />
+              </div>
               <h3>{feature.title}</h3>
               <p>{feature.text}</p>
             </article>

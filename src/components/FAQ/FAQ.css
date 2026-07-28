@@ -24,6 +24,12 @@
   border-color: var(--color-border-strong);
 }
 
+.faq__heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 .faq__question {
   display: flex;
   align-items: center;
@@ -31,7 +37,7 @@
   gap: var(--space-4);
   width: 100%;
   padding: var(--space-5) var(--space-6);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-heading);
   text-align: left;
@@ -74,7 +80,7 @@
 .faq__answer > p {
   overflow: hidden;
   padding: 0 var(--space-6);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-muted);
   transition: padding var(--duration-normal) var(--ease-out);
