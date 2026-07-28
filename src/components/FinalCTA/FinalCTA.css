@@ -30,8 +30,11 @@
   margin-inline: auto;
 }
 
-.cta__eyebrow {
-  color: rgba(255, 255, 255, 0.8);
+.cta__card .cta__eyebrow {
+  color: #ffffff;
+  opacity: 1;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .cta__title {

@@ -4,7 +4,6 @@ import Features from "./components/Features/Features";
 import Story from "./components/Story/Story";
 import WhyReemzar from "./components/WhyReemzar/WhyReemzar";
 import Benefits from "./components/Benefits/Benefits";
-import InteractiveProduct from "./components/InteractiveProduct/InteractiveProduct";
 import Comparison from "./components/Comparison/Comparison";
 import Specifications from "./components/Specifications/Specifications";
 import Lifestyle from "./components/Lifestyle/Lifestyle";
@@ -24,7 +23,6 @@ function App() {
         <Story />
         <WhyReemzar />
         <Benefits />
-        <InteractiveProduct />
         <Comparison />
         <Specifications />
         <Lifestyle />
